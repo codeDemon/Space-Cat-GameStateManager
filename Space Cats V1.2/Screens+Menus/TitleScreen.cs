@@ -174,11 +174,11 @@ namespace Space_Cats_V1._2
 
 
         //Required Load Method
-        public void loadTexture(ref ContentManager content)
+        public void loadTexture(ContentManager content)
         {
-            this.z_logo = content.Load<Texture2D>("LogoScreen");
-            this.z_options = content.Load<Texture2D>("TitleOptions");
-            this.z_arrow = new GameObject(content.Load<Texture2D>("ArrowSelection"));
+            this.z_logo = content.Load<Texture2D>("Content\\Screens\\LogoScreen");
+            this.z_options = content.Load<Texture2D>("Content\\Screens\\TitleOptions");
+            this.z_arrow = new GameObject(content.Load<Texture2D>("Content\\Screens\\ArrowSelection"));
             //Try to fiqure the starting position for arrow ^^
             this.z_arrow.setPosition(new Vector2(170, 350));
             this.z_isLoaded = true;

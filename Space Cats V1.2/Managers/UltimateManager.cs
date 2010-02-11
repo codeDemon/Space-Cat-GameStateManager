@@ -42,7 +42,7 @@ namespace Space_Cats_V1._2
         Rectangle z_viewPort;
 
         //Constructor
-        public UltimateManager(Game game)
+        public UltimateManager(Game game, ContentManager content)
         {
             this.z_game = game;
             //Get Game Services
@@ -54,16 +54,17 @@ namespace Space_Cats_V1._2
             //Initialize necessary Managers
             this.z_gameStateManager = new GameStateManager(this.z_game);
             this.z_loadingManager = new LoadingManager(this.z_game);
+            this.z_loadingManager.InitialLoad(this.z_gameStateManager.getListScreen(), content, this.z_gameStateManager.getTitleScreen());
 
         }
 
 
         //Update Method
-        public void Update(KeyboardState currentKey, KeyboardState previousKey, GameTime gameTime, ref ContentManager content)
+        public void Update(KeyboardState currentKey, KeyboardState previousKey, GameTime gameTime, ContentManager content)
         {
             if (!this.z_loadingManager.getInitialLoadFinished())
             {
-                this.z_loadingManager.InitialLoad(this.z_gameStateManager.getListScreen(), ref content);
+                //this.z_loadingManager.InitialLoad(this.z_gameStateManager.getListScreen(), content);
                 this.z_loadingManager.Update(gameTime);
                 return;
             }

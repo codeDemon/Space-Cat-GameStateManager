@@ -112,7 +112,7 @@ namespace Space_Cats_V1._2
             this.Services.AddService(typeof(Rectangle), z_viewportRec);
 
             //Initialize the Ultimate Manager
-            this.z_ultimateManager = new UltimateManager(this);
+            this.z_ultimateManager = new UltimateManager(this, this.z_contentManager);
 
             
 
@@ -199,8 +199,8 @@ namespace Space_Cats_V1._2
         protected override void Update(GameTime gameTime)
         {
             KeyboardState currentKeyboardState = Keyboard.GetState();
-
-            this.z_ultimateManager.Update(currentKeyboardState, this.z_previousKeyboardState, gameTime, ref this.z_contentManager);
+            if(this.z_contentManager != null)
+                this.z_ultimateManager.Update(currentKeyboardState, this.z_previousKeyboardState, gameTime, this.z_contentManager);
 
 
             /*

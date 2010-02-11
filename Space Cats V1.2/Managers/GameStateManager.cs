@@ -77,6 +77,7 @@ namespace Space_Cats_V1._2
             this.z_listScreen = new List<IScreenMenu>();
 
             this.z_loadingManagerIsActive = true;
+            this.addScreensToList();
             
         }
         //Helper Method for adding all the screens and Menus to the list

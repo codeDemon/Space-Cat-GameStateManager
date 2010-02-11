@@ -18,7 +18,7 @@ namespace Space_Cats_V1._2
     {
         //Every Screen and Menu class must implement this interface
 
-        void loadTexture(ref ContentManager content);
+        void loadTexture(ContentManager content);
 
 
 
