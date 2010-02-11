@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Audio\Music\ATreeFalls.mp3</Source>
+      <Name>Audio\Music\ATreeFalls</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\ATreeFalls.xnb</Output>
+      <Extra>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\ATreeFalls.wma</Extra>
+      <Time>2010-02-09T18:08:44.46875-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Music\Beautiful_Darkness.mp3</Source>
+      <Name>Audio\Music\Beautiful_Darkness</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Beautiful_Darkness.xnb</Output>
+      <Extra>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Beautiful_Darkness.wma</Extra>
+      <Time>2010-02-09T18:08:44.53125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Music\Mark Oleson - All Good Things WIP1.mp3</Source>
+      <Name>Audio\Music\Mark Oleson - All Good Things WIP1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Mark Oleson - All Good Things WIP1.xnb</Output>
+      <Extra>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Mark Oleson - All Good Things WIP1.wma</Extra>
+      <Time>2010-02-09T18:08:44.59375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Music\Mark Oleson - credits demo.mp3</Source>
+      <Name>Audio\Music\Mark Oleson - credits demo</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Mark Oleson - credits demo.xnb</Output>
+      <Extra>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Mark Oleson - credits demo.wma</Extra>
+      <Time>2010-02-09T18:08:44.625-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Music\Mark Oleson - Peril Probability Prime WIP 1.mp3</Source>
+      <Name>Audio\Music\Mark Oleson - Peril Probability Prime WIP 1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Mark Oleson - Peril Probability Prime WIP 1.xnb</Output>
+      <Extra>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\Mark Oleson - Peril Probability Prime WIP 1.wma</Extra>
+      <Time>2010-02-09T18:08:44.671875-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Music\OutsideMyComfortZone.mp3</Source>
+      <Name>Audio\Music\OutsideMyComfortZone</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\OutsideMyComfortZone.xnb</Output>
+      <Extra>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\Music\OutsideMyComfortZone.wma</Extra>
+      <Time>2010-02-09T18:08:44.703125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\SoundFX\AchievementSound.wav</Source>
+      <Name>Audio\SoundFX\AchievementSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\SoundFX\AchievementSound.xnb</Output>
+      <Time>2010-02-09T18:08:54.3125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\SoundFX\LaserPellet.wav</Source>
+      <Name>Audio\SoundFX\LaserPellet</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Audio\SoundFX\LaserPellet.xnb</Output>
+      <Time>2010-02-09T18:08:54.3125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\LivesFont.spritefont</Source>
+      <Name>Fonts\LivesFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Fonts\LivesFont.xnb</Output>
+      <Time>2010-02-09T18:09:04.28125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\TimerFont.spritefont</Source>
+      <Name>Fonts\TimerFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Fonts\TimerFont.xnb</Output>
+      <Time>2010-02-09T18:09:04.28125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\AchievementFailed.png</Source>
+      <Name>Images\AchievementFailed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\AchievementFailed.xnb</Output>
+      <Time>2010-02-09T18:10:08.234375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Ship2.png</Source>
+      <Name>Images\Ship2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\Ship2.xnb</Output>
+      <Time>2010-02-09T18:10:08.234375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Asteroids\Asteroid1.png</Source>
+      <Name>Images\Asteroids\Asteroid1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\Asteroids\Asteroid1.xnb</Output>
+      <Time>2010-02-09T18:10:17.953125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Asteroids\Asteroid2.png</Source>
+      <Name>Images\Asteroids\Asteroid2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\Asteroids\Asteroid2.xnb</Output>
+      <Time>2010-02-09T18:10:17.953125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Asteroids\Asteroid3.png</Source>
+      <Name>Images\Asteroids\Asteroid3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\Asteroids\Asteroid3.xnb</Output>
+      <Time>2010-02-09T18:10:17.953125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Asteroids\Asteroid4.png</Source>
+      <Name>Images\Asteroids\Asteroid4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\Asteroids\Asteroid4.xnb</Output>
+      <Time>2010-02-09T18:10:17.953125-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Asteroids\Asteroid5.png</Source>
+      <Name>Images\Asteroids\Asteroid5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\Asteroids\Asteroid5.xnb</Output>
+      <Time>2010-02-09T18:10:17.96875-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\EnemyShips\EnemyShip1.png</Source>
+      <Name>Images\EnemyShips\EnemyShip1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\EnemyShips\EnemyShip1.xnb</Output>
+      <Time>2010-02-09T18:10:25.34375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Missles\Ball1.png</Source>
+      <Name>Images\Missles\Ball1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Images\Missles\Ball1.xnb</Output>
+      <Time>2010-02-09T18:10:34.515625-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\ArrowSelection.JPG</Source>
+      <Name>Screens\ArrowSelection</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\ArrowSelection.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\ConfirmationMenu.JPG</Source>
+      <Name>Screens\ConfirmationMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\ConfirmationMenu.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\GameOverScreen.JPG</Source>
+      <Name>Screens\GameOverScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\GameOverScreen.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\LoadingStatic.JPG</Source>
+      <Name>Screens\LoadingStatic</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\LoadingStatic.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\LogoScreen.JPG</Source>
+      <Name>Screens\LogoScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\LogoScreen.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\MainMenuScreen.JPG</Source>
+      <Name>Screens\MainMenuScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\MainMenuScreen.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\MissionMenu.JPG</Source>
+      <Name>Screens\MissionMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\MissionMenu.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\ProfileNotFoundScreen.JPG</Source>
+      <Name>Screens\ProfileNotFoundScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\ProfileNotFoundScreen.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Screens\TitleOptions.JPG</Source>
+      <Name>Screens\TitleOptions</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Screens\TitleOptions.xnb</Output>
+      <Time>2010-02-09T18:11:29.984375-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\spaceBackground.JPG</Source>
+      <Name>Textures\spaceBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\Textures\spaceBackground.xnb</Output>
+      <Time>2010-02-09T18:11:38.0625-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Documents and Settings\David\My Documents\Visual Studio 2008\Projects\Space Cats V1.2\Space Cats V1.2\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2009-05-28T01:16:14-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2009-05-28T01:16:06-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2009-05-28T01:16:16-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2009-05-28T01:16:26-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2009-05-28T01:16:12-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.1\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2009-05-28T01:16:06-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.1.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2010-01-21T22:18:12.828125-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
