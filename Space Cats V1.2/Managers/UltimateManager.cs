@@ -69,7 +69,10 @@ namespace Space_Cats_V1._2
                 return;
             }
             else
-                this.z_gameStateManager.setLoadingManagerIsActive(false);
+            {
+                if (this.z_gameStateManager.getLoadingManagerIsActive())
+                    this.z_gameStateManager.setLoadingManagerIsActive(false);
+            }
             this.z_gameStateManager.UpdateKeyBoard(currentKey, previousKey, gameTime);
 
         }

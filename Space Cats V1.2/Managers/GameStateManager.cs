@@ -44,6 +44,7 @@ namespace Space_Cats_V1._2
         private GameState z_previousGameState; //For the back button
         private TitleScreen z_titleScreen;
         private LoadingScreen z_loadingScreen;
+        private MainMenuScreen z_MainMenuScreen;
         private List<IScreenMenu> z_listScreen;
         private bool z_loadingManagerIsActive;
         //Declare Game Services
@@ -73,6 +74,7 @@ namespace Space_Cats_V1._2
             this.z_loadingScreen = new LoadingScreen(this.z_content.Load<Texture2D>("Content\\Screens\\LogoScreen"),
                                                      this.z_content.Load<Texture2D>("Content\\Screens\\LoadingStatic"));
             this.z_titleScreen = new TitleScreen();
+            this.z_MainMenuScreen = new MainMenuScreen();
 
             this.z_listScreen = new List<IScreenMenu>();
 
@@ -84,7 +86,7 @@ namespace Space_Cats_V1._2
         private void addScreensToList()
         {
             this.z_listScreen.Add(this.z_titleScreen);
-
+            this.z_listScreen.Add(this.z_MainMenuScreen);
 
         }
 
@@ -170,7 +172,8 @@ namespace Space_Cats_V1._2
                                             if (!Guide.IsVisible)
                                                 Guide.ShowSignIn(1, false);
                                             this.z_previousGameState = this.z_currentGameState;
-                                            this.z_currentGameState = GameState.ProfileScreen;
+                                            //this.z_currentGameState = GameState.ProfileScreen;
+                                            this.z_currentGameState = GameState.MainMenu;
                                         }
                                         else
                                         {
@@ -184,7 +187,30 @@ namespace Space_Cats_V1._2
                         }
                         break;
                     }
+                case GameState.MainMenu:
+                    {
+                        this.z_MainMenuScreen.update(currentKeyState, previousKeyState);
+                        switch (this.z_MainMenuScreen.getCurrentState())
+                        {
+                            case MainMenuScreen.MainMenuState.Exit:
+                                {
+                                    this.z_previousGameState = this.z_currentGameState;
+                                    this.z_currentGameState = GameState.TitleMenu;
+                                    this.z_MainMenuScreen.setCurrentState(MainMenuScreen.MainMenuState.Missions);
+                                    break;
+                                }
+                            default:
+                                {
+                                    if (previousKeyState.IsKeyUp(Keys.Enter) && currentKeyState.IsKeyDown(Keys.Enter))
+                                    {
+                                        //Implement changing states later
 
+                                    }
+                                    break;
+                                }
+                        }
+                        break;
+                    }
             }
             
         }
@@ -204,7 +230,11 @@ namespace Space_Cats_V1._2
                         this.z_titleScreen.Draw(spriteBatch);
                         break;
                     }
-
+                case GameState.MainMenu:
+                    {
+                        this.z_MainMenuScreen.Draw(spriteBatch);
+                        break;
+                    }
             }
             
         }
