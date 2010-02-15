@@ -31,13 +31,15 @@ namespace Space_Cats_V1._2
         private Texture2D z_options;
         private GameObject z_arrow;
         private TitleState z_currentState;
+        private Rectangle z_viewPort;
         private bool z_isLoaded;
 
         //Constructor
-        public TitleScreen()
+        public TitleScreen(Rectangle viewPort)
         {
             this.z_currentState = TitleState.Start;
             this.z_isLoaded = false;
+            this.z_viewPort = viewPort;
         }
 
         //Accessors
@@ -84,6 +86,10 @@ namespace Space_Cats_V1._2
         {
             this.z_isLoaded = isLoaded;
         }
+        public void setViewPort(Rectangle viewPort)
+        {
+            this.z_viewPort = viewPort;
+        }
 
 
         //Update Method
@@ -101,7 +107,7 @@ namespace Space_Cats_V1._2
                             && previousKeyboardState.IsKeyUp(Keys.Up))
                         {
                             this.z_currentState = TitleState.Options;
-                            this.z_arrow.setPosition(new Vector2(170, 425));
+                            this.z_arrow.setPosition(new Vector2((float)((this.z_viewPort.Width / 2) - 170), (float)(this.z_viewPort.Height / 2)+125));
                         }
                         break;
                     }
@@ -111,13 +117,13 @@ namespace Space_Cats_V1._2
                             && previousKeyboardState.IsKeyUp(Keys.Up))
                         {
                             this.z_currentState = TitleState.Exit;
-                            this.z_arrow.setPosition(new Vector2(170, 490));
+                            this.z_arrow.setPosition(new Vector2((float)((this.z_viewPort.Width / 2) - 170), (float)(this.z_viewPort.Height / 2)+190));
                         }
                         else if (previousKeyboardState.IsKeyUp(Keys.Down) && currentKeyboardState.IsKeyDown(Keys.Up)
                                 && previousKeyboardState.IsKeyUp(Keys.Up))
                         {
                             this.z_currentState = TitleState.Start;
-                            this.z_arrow.setPosition(new Vector2(170, 350));
+                            this.z_arrow.setPosition(new Vector2((float)((this.z_viewPort.Width / 2) - 170), (float)(this.z_viewPort.Height / 2)+50));
                         }
                         break;
                     }
@@ -127,7 +133,7 @@ namespace Space_Cats_V1._2
                                 && previousKeyboardState.IsKeyUp(Keys.Up))
                         {
                             this.z_currentState = TitleState.Options;
-                            this.z_arrow.setPosition(new Vector2(170, 425));
+                            this.z_arrow.setPosition(new Vector2((float)((this.z_viewPort.Width / 2) - 170), (float)(this.z_viewPort.Height / 2)+125));
                         }
                         break;
                     }
@@ -139,30 +145,47 @@ namespace Space_Cats_V1._2
 
 
         //Draw Method
-        public void Draw(SpriteBatch spritebatch)
+        public void Draw(SpriteBatch spritebatch, Rectangle viewPort)
         {
             //Don't draw anything if the titleScreen is not yet loaded.
             if (this.z_logo==null || this.z_options==null || this.z_arrow == null)
                 return;
 
-            spritebatch.Draw(this.z_logo, new Vector2(0, 0), Color.White);
-            spritebatch.Draw(this.z_options, new Vector2(0, 300), Color.White);
+            //Create a new Vector that will scale the background image logo
+            Vector2 ScaledVec = new Vector2(((float)viewPort.Width / this.z_logo.Width),
+                                ((float)viewPort.Height / this.z_logo.Height));
+
+            spritebatch.Draw(this.z_logo, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
+            spritebatch.Draw(this.z_options, new Vector2((float)((viewPort.Width / 2) - 400), (float)(viewPort.Height / 2)), null,
+                             Color.White, 0, new Vector2(0,0), new Vector2(1,1), SpriteEffects.None, 1);
+
+            
             
             switch (this.z_currentState)
             {
                 case TitleState.Start:
                     {
-                        spritebatch.Draw(this.z_options, new Rectangle(255, 340, 245, 60), new Rectangle(255, 40, 245, 60), Color.Blue);
+                        spritebatch.Draw(this.z_options, 
+                                         new Rectangle((int)((viewPort.Width / 2) - 400)+255, 
+                                                       (int)(viewPort.Height / 2)+40, 245, 60), 
+                                         new Rectangle(255, 40, 245, 60), Color.Blue);
                         break;
                     }
                 case TitleState.Options:
                     {
-                        spritebatch.Draw(this.z_options, new Rectangle(255, 400, 245, 80), new Rectangle(255, 100, 245, 80), Color.Blue);
+                        spritebatch.Draw(this.z_options, 
+                                         new Rectangle((int)((viewPort.Width / 2) - 400)+255, 
+                                                       (int)(viewPort.Height / 2)+100, 245, 80), 
+                                         new Rectangle(255, 100, 245, 80), Color.Blue);
                         break;
                     }
                 case TitleState.Exit:
                     {
-                        spritebatch.Draw(this.z_options, new Rectangle(255, 480, 245, 60), new Rectangle(255, 180, 245, 60), Color.Blue);
+                        spritebatch.Draw(this.z_options, 
+                                         new Rectangle((int)((viewPort.Width / 2) - 400)+255, 
+                                                       (int)(viewPort.Height / 2)+180, 245, 60), 
+                                         new Rectangle(255, 180, 245, 60), Color.Blue);
                         break;
                     }
 
@@ -177,10 +200,10 @@ namespace Space_Cats_V1._2
         public void loadTexture(ContentManager content)
         {
             this.z_logo = content.Load<Texture2D>("Content\\Screens\\LogoScreen");
-            this.z_options = content.Load<Texture2D>("Content\\Screens\\TitleOptions");
+            this.z_options = content.Load<Texture2D>("Content\\Screens\\TitleOptions3");
             this.z_arrow = new GameObject(content.Load<Texture2D>("Content\\Screens\\ArrowSelection"));
             //Try to fiqure the starting position for arrow ^^
-            this.z_arrow.setPosition(new Vector2(170, 350));
+            this.z_arrow.setPosition(new Vector2((float)((this.z_viewPort.Width / 2) - 170), (float)(this.z_viewPort.Height / 2)+50));
             this.z_isLoaded = true;
         }
 

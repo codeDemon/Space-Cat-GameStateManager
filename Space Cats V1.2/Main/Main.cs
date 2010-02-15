@@ -61,6 +61,7 @@ namespace Space_Cats_V1._2
         private SpriteBatch z_spriteBatch;
         private Rectangle z_viewportRec;
         private ContentManager z_contentManager;
+        private AudioManager z_audioManager;
         private UltimateManager z_ultimateManager;
         private KeyboardState z_previousKeyboardState = Keyboard.GetState();
 
@@ -73,9 +74,17 @@ namespace Space_Cats_V1._2
         public Main()
         {
             this.z_graphics = new GraphicsDeviceManager(this);
+            this.z_audioManager = new AudioManager(this);
+            this.z_graphics.PreferredBackBufferWidth = 1280;
+            this.z_graphics.PreferredBackBufferHeight = 720;
+
+            this.z_graphics.IsFullScreen = true;
+            this.z_graphics.SynchronizeWithVerticalRetrace = true;
+
             Content.RootDirectory = "Content";
             //Adds the xbox live Profile Service to the game
             this.Components.Add(new GamerServicesComponent(this));
+            this.Components.Add(this.z_audioManager);
         }
 
         void Window_ClientSizeChanged(object sender, EventArgs e)
@@ -114,10 +123,10 @@ namespace Space_Cats_V1._2
             //Initialize the Ultimate Manager
             this.z_ultimateManager = new UltimateManager(this, this.z_contentManager);
 
+
+
+
             
-
-
-
 
 
 

@@ -71,9 +71,11 @@ namespace Space_Cats_V1._2
         //Perform the first loading for the game
         public void InitialLoad(List<IScreenMenu> listScreen, ContentManager content, TitleScreen titleScreen)
         {
-            //Load all necessary content for all Screens and Menus
+            //Load all necessary images/content for all Screens and Menus
             for (int i = 0; i < listScreen.Count; i++)
                 listScreen[i].loadTexture(content);
+
+            //Load all audio files into the AudioManager
 
             //this.z_initialLoadFinished = true;
         }

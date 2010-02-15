@@ -31,13 +31,15 @@ namespace Space_Cats_V1._2
         //Instance Variables
         private Texture2D z_MainScreenPicture;
         private MainMenuState z_CurrentState;
+        private Rectangle z_viewPort;
         private bool z_isLoaded;
 
         //Constructor
-        public MainMenuScreen()
+        public MainMenuScreen(Rectangle viewPort)
         {
             this.z_MainScreenPicture = null;
             this.z_CurrentState = MainMenuState.Missions;
+            this.z_viewPort = viewPort;
             this.z_isLoaded = false;
         }
 
@@ -69,6 +71,10 @@ namespace Space_Cats_V1._2
         {
             this.z_isLoaded = loaded;
         }
+        public void setViewPort(Rectangle viewPort)
+        {
+            this.z_viewPort = viewPort;
+        }
 
         //Update Method
         public void update(KeyboardState currentKeyboardState, KeyboardState previousKeyboardState)
@@ -81,6 +87,119 @@ namespace Space_Cats_V1._2
                 this.z_CurrentState = MainMenuState.Exit;
 
             //Implement the other states/input later
+            //Save some lines of code -->
+            //By checking that none of the keys are being held down here
+            if (previousKeyboardState.IsKeyUp(Keys.Up) && previousKeyboardState.IsKeyUp(Keys.Down) &&
+                previousKeyboardState.IsKeyUp(Keys.Right) && previousKeyboardState.IsKeyUp(Keys.Left))
+            {
+                switch (this.z_CurrentState)
+                {
+                    //If state is Missions, can only move right and down
+                    //right is ship state
+                    //down is Achievements state
+                    case MainMenuState.Missions:
+                        {
+                            //if player wants to go right
+                            if (currentKeyboardState.IsKeyDown(Keys.Right))
+                            {
+                                this.z_CurrentState = MainMenuState.Ship;
+                            }
+                            //if player wants to go down
+                            if (currentKeyboardState.IsKeyDown(Keys.Down))
+                            {
+                                this.z_CurrentState = MainMenuState.Achievements;
+                            }
+                            break;
+                        }
+                    //If state is Ship, can move left, right, and down
+                    //left is missions
+                    //right is store
+                    //down is options
+                    case MainMenuState.Ship:
+                        {
+                            //if player wants to go right
+                            if (currentKeyboardState.IsKeyDown(Keys.Right))
+                                this.z_CurrentState = MainMenuState.Store;
+
+                            //if player wants to go down
+                            if (currentKeyboardState.IsKeyDown(Keys.Down))
+                                this.z_CurrentState = MainMenuState.Options;
+
+                            //if player wants to go left
+                            if (currentKeyboardState.IsKeyDown(Keys.Left))
+                                this.z_CurrentState = MainMenuState.Missions;
+
+                            break;
+                        }
+                        //If state is Store, can move only left and down
+                        //Left is Ship
+                        //Down is Back
+                    case MainMenuState.Store:
+                        {
+                            //if player wants to go Left
+                            if (currentKeyboardState.IsKeyDown(Keys.Left))
+                                this.z_CurrentState = MainMenuState.Ship;
+
+                            //if player wants to go Down
+                            if (currentKeyboardState.IsKeyDown(Keys.Down))
+                                this.z_CurrentState = MainMenuState.Back;
+
+                            break;
+                        }
+                        //If state is Achievements, can only move up and right
+                        //Up is missons
+                        //Right is Options
+                    case MainMenuState.Achievements:
+                        {
+                            //if player wants to go right
+                            if (currentKeyboardState.IsKeyDown(Keys.Right))
+                                this.z_CurrentState = MainMenuState.Options;
+
+                            //if player wants to go Up
+                            if (currentKeyboardState.IsKeyDown(Keys.Up))
+                                this.z_CurrentState = MainMenuState.Missions;
+
+                            break;
+                        }
+                        //If State is Options, can move left, Up, and right
+                        //left is achievements
+                        //Up is Ship
+                        //Right is Back
+                    case MainMenuState.Options:
+                        {
+                            //if player wants to go Left
+                            if (currentKeyboardState.IsKeyDown(Keys.Left))
+                                this.z_CurrentState = MainMenuState.Achievements;
+
+                            //if player wants to go Up
+                            if (currentKeyboardState.IsKeyDown(Keys.Up))
+                                this.z_CurrentState = MainMenuState.Ship;
+
+                            //if player wants to go right
+                            if (currentKeyboardState.IsKeyDown(Keys.Right))
+                                this.z_CurrentState = MainMenuState.Back;
+
+                            break;
+                        }
+                        //If state is back, can move left and up
+                        //left is Options
+                        //Up is Store
+                    case MainMenuState.Back:
+                        {
+                            //if player wants to go Left
+                            if (currentKeyboardState.IsKeyDown(Keys.Left))
+                                this.z_CurrentState = MainMenuState.Options;
+
+                            //if player wants to go Up
+                            if (currentKeyboardState.IsKeyDown(Keys.Up))
+                                this.z_CurrentState = MainMenuState.Store;
+
+                            break;
+                        }
+                    default:
+                        break;
+                }
+            }
 
         }
 
@@ -91,9 +210,51 @@ namespace Space_Cats_V1._2
             if (!this.z_isLoaded || this.z_MainScreenPicture == null)
                 return;
 
-            spriteBatch.Draw(this.z_MainScreenPicture, new Vector2(0, 0), Color.White);
+            //Create a new Vector that will scale the background
+            Vector2 ScaledVec = new Vector2(((float)this.z_viewPort.Width / this.z_MainScreenPicture.Width),
+                                ((float)this.z_viewPort.Height / this.z_MainScreenPicture.Height));
+
+            spriteBatch.Draw(this.z_MainScreenPicture, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
 
             //Implement the different MainMenuOption States later
+            switch (this.z_CurrentState)
+            {
+                case MainMenuState.Missions:
+                    {
+
+                        break;
+                    }
+                case MainMenuState.Ship:
+                    {
+
+                        break;
+                    }
+                case MainMenuState.Store:
+                    {
+
+                        break;
+                    }
+                case MainMenuState.Achievements:
+                    {
+
+                        break;
+                    }
+                case MainMenuState.Options:
+                    {
+
+                        break;
+                    }
+                case MainMenuState.Back:
+                    {
+
+                        break;
+                    }
+
+
+
+
+            }
         }
 
 

@@ -33,3 +33,5 @@ Content\Screens\MissionMenu.xnb
 Content\Screens\ProfileNotFoundScreen.xnb
 Content\Screens\TitleOptions.xnb
 Content\Textures\spaceBackground.xnb
+Content\Screens\TitleOptions2.xnb
+Content\Screens\TitleOptions3.xnb

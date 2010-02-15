@@ -36,25 +36,26 @@ namespace Space_Cats_V1._2
 
             spriteBatch.Draw(this.z_logo, new Vector2(0, 0), null, Color.White, 
                              0, new Vector2(0, 0), ScaledVec,SpriteEffects.None, 1);
+
             if (this.z_timer < 700)
-                spriteBatch.Draw(this.z_loadingScreen, new Rectangle(0,
+                spriteBatch.Draw(this.z_loadingScreen, new Rectangle((int)(viewPort.Width / 2) - 400,
                                 (int)(viewPort.Height / 2), 510, 200 + (int)(viewPort.Height / 2)),
                                 new Rectangle(0, 0, 510, 200), Color.White);
             else if (this.z_timer < 1400)
-                spriteBatch.Draw(this.z_loadingScreen, new Rectangle(0,
+                spriteBatch.Draw(this.z_loadingScreen, new Rectangle((int)(viewPort.Width / 2) - 400,
                                 (int)(viewPort.Height / 2), 570, 200 + (int)(viewPort.Height / 2)),
                                 new Rectangle(0, 0, 570, 200), Color.White);
             else if (this.z_timer < 2100)
-                spriteBatch.Draw(this.z_loadingScreen, new Rectangle(0,
+                spriteBatch.Draw(this.z_loadingScreen, new Rectangle((int)(viewPort.Width / 2) - 400,
                                 (int)(viewPort.Height / 2), 630, 200 + (int)(viewPort.Height / 2)),
                                 new Rectangle(0, 0, 630, 200), Color.White);
             else if (this.z_timer < 2800)
-                spriteBatch.Draw(this.z_loadingScreen, new Rectangle(0,
+                spriteBatch.Draw(this.z_loadingScreen, new Rectangle((int)(viewPort.Width / 2) - 400,
                                 (int)(viewPort.Height / 2), 700, 200 + (int)(viewPort.Height / 2)),
                                 new Rectangle(0, 0, 700, 200), Color.White);
             else
             {
-                spriteBatch.Draw(this.z_loadingScreen, new Rectangle(0,
+                spriteBatch.Draw(this.z_loadingScreen, new Rectangle((int)(viewPort.Width / 2) - 400,
                                 (int)(viewPort.Height / 2), 510, 200 + (int)(viewPort.Height / 2)),
                                 new Rectangle(0, 0, 510, 200), Color.White);
                 this.z_timer = 0;

@@ -14,8 +14,53 @@ using System.Text;
 
 namespace Space_Cats_V1._2
 {
-    class AudioManager
+    class AudioManager : GameComponent
     {
+        //Instance Variables
+        private Dictionary<string, Song> z_ListSongs;
+        private Dictionary<string, SoundEffect> z_ListSounds;
+        public bool z_songIsPlaying;
+
+
+        //Constructor
+        public AudioManager(Game game)
+            : base(game)
+        {
+            this.z_ListSongs = new Dictionary<string, Song>();
+            this.z_ListSounds = new Dictionary<string, SoundEffect>();
+            this.z_songIsPlaying = false;
+        }
+
+        //Accessors
+
+
+        //Mutators
+
+
+        //Load Method
+
+
+        //Update Method
+
+
+        //Play A Sound Method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /*Some Sound stuff
          * 
          * //Instance Variables
