@@ -41,7 +41,6 @@ namespace Space_Cats_V1._2
 
         //Instance Variables
         private GameState z_currentGameState;
-        private GameState z_previousGameState; //For the back button //Edit, not going to work
         private TitleScreen z_titleScreen;
         private LoadingScreen z_loadingScreen;
         private MainMenuScreen z_MainMenuScreen;
@@ -70,7 +69,6 @@ namespace Space_Cats_V1._2
 
             //Initialize States
             this.z_currentGameState = GameState.LoadingScreen;
-            this.z_previousGameState = GameState.TitleMenu;
 
             //Initialize Screens and Menus
             this.z_loadingScreen = new LoadingScreen(this.z_content.Load<Texture2D>("Content\\Screens\\LogoScreen"),
@@ -99,10 +97,14 @@ namespace Space_Cats_V1._2
         {
             return this.z_currentGameState;
         }
+        /*//This method is probably not needed
         public GameState getPreviousGameState()
         {
-            return this.z_previousGameState;
+            if (this.z_previousStateStack.Count <= 0)
+                throw new Exception("Stack is empty, no previous state");
+            return this.z_previousStateStack.Peek();
         }
+         * */
         public TitleScreen getTitleScreen()
         {
             return this.z_titleScreen;
@@ -121,9 +123,9 @@ namespace Space_Cats_V1._2
         {
             this.z_currentGameState = newState;
         }
-        public void setPreviousGameState(GameState newState)
+        public void addPreviousGameState(GameState newState)
         {
-            this.z_previousGameState = newState;
+            this.z_previousStateStack.Push(newState);
         }
         public void setTitleScreen(TitleScreen newScreen)
         {
