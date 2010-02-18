@@ -29,7 +29,12 @@ namespace Space_Cats_V1._2
 
 
         //Instance Variables
-        private Texture2D z_MainScreenPicture;
+        private Texture2D z_MainScreenPicture1;
+        private Texture2D z_MainScreenPicture2;
+        private Texture2D z_MainScreenPicture3;
+        private Texture2D z_MainScreenPicture4;
+        private Texture2D z_MainScreenPicture5;
+        private Texture2D z_MainScreenPicture6;
         private MainMenuState z_CurrentState;
         private Rectangle z_viewPort;
         private bool z_isLoaded;
@@ -37,7 +42,12 @@ namespace Space_Cats_V1._2
         //Constructor
         public MainMenuScreen(Rectangle viewPort)
         {
-            this.z_MainScreenPicture = null;
+            this.z_MainScreenPicture1 = null;
+            this.z_MainScreenPicture2 = null;
+            this.z_MainScreenPicture3 = null;
+            this.z_MainScreenPicture4 = null;
+            this.z_MainScreenPicture5 = null;
+            this.z_MainScreenPicture6 = null;
             this.z_CurrentState = MainMenuState.Missions;
             this.z_viewPort = viewPort;
             this.z_isLoaded = false;
@@ -45,9 +55,29 @@ namespace Space_Cats_V1._2
 
 
         //Accessors
-        public Texture2D getMainScreenTexture()
+        public Texture2D getMainScreenTexture1()
         {
-            return this.z_MainScreenPicture;
+            return this.z_MainScreenPicture1;
+        }
+        public Texture2D getMainScreenTexture2()
+        {
+            return this.z_MainScreenPicture2;
+        }
+        public Texture2D getMainScreenTexture3()
+        {
+            return this.z_MainScreenPicture3;
+        }
+        public Texture2D getMainScreenTexture4()
+        {
+            return this.z_MainScreenPicture4;
+        }
+        public Texture2D getMainScreenTexture5()
+        {
+            return this.z_MainScreenPicture5;
+        }
+        public Texture2D getMainScreenTexture6()
+        {
+            return this.z_MainScreenPicture6;
         }
         public MainMenuState getCurrentState()
         {
@@ -59,9 +89,29 @@ namespace Space_Cats_V1._2
         }
 
         //Mutators
-        public void setMainScreenTexture(Texture2D newTexture)
+        public void setMainScreenTexture1(Texture2D newTexture)
         {
-            this.z_MainScreenPicture = newTexture;
+            this.z_MainScreenPicture1 = newTexture;
+        }
+        public void setMainScreenTexture2(Texture2D newTexture)
+        {
+            this.z_MainScreenPicture2 = newTexture;
+        }
+        public void setMainScreenTexture3(Texture2D newTexture)
+        {
+            this.z_MainScreenPicture3 = newTexture;
+        }
+        public void setMainScreenTexture4(Texture2D newTexture)
+        {
+            this.z_MainScreenPicture4 = newTexture;
+        }
+        public void setMainScreenTexture5(Texture2D newTexture)
+        {
+            this.z_MainScreenPicture5 = newTexture;
+        }
+        public void setMainScreenTexture6(Texture2D newTexture)
+        {
+            this.z_MainScreenPicture6 = newTexture;
         }
         public void setCurrentState(MainMenuState newState)
         {
@@ -206,48 +256,55 @@ namespace Space_Cats_V1._2
         //Draw Method
         public void Draw(SpriteBatch spriteBatch)
         {
-            //Don't draw anything if the MainMenuScreen is not yet loaded.
-            if (!this.z_isLoaded || this.z_MainScreenPicture == null)
-                return;
+            //Don't draw anything if the MainMenuScreens are not yet loaded.
+            if (!this.z_isLoaded || this.z_MainScreenPicture1 == null || this.z_MainScreenPicture2==null
+                || this.z_MainScreenPicture3==null || this.z_MainScreenPicture4==null ||
+                this.z_MainScreenPicture5 == null || this.z_MainScreenPicture6 == null)
+                    return;
 
             //Create a new Vector that will scale the background
-            Vector2 ScaledVec = new Vector2(((float)this.z_viewPort.Width / this.z_MainScreenPicture.Width),
-                                ((float)this.z_viewPort.Height / this.z_MainScreenPicture.Height));
+            Vector2 ScaledVec = new Vector2(((float)this.z_viewPort.Width / this.z_MainScreenPicture1.Width),
+                                ((float)this.z_viewPort.Height / this.z_MainScreenPicture1.Height));
 
-            spriteBatch.Draw(this.z_MainScreenPicture, new Vector2(0, 0), null, Color.White,
-                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
+            
 
             //Implement the different MainMenuOption States later
             switch (this.z_CurrentState)
             {
                 case MainMenuState.Missions:
                     {
-
+                        spriteBatch.Draw(this.z_MainScreenPicture1, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
                         break;
                     }
                 case MainMenuState.Ship:
                     {
-
+                        spriteBatch.Draw(this.z_MainScreenPicture2, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
                         break;
                     }
                 case MainMenuState.Store:
                     {
-
+                        spriteBatch.Draw(this.z_MainScreenPicture3, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
                         break;
                     }
                 case MainMenuState.Achievements:
                     {
-
+                        spriteBatch.Draw(this.z_MainScreenPicture4, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
                         break;
                     }
                 case MainMenuState.Options:
                     {
-
+                        spriteBatch.Draw(this.z_MainScreenPicture5, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
                         break;
                     }
                 case MainMenuState.Back:
                     {
-
+                        spriteBatch.Draw(this.z_MainScreenPicture6, new Vector2(0, 0), null, Color.White,
+                             0, new Vector2(0, 0), ScaledVec, SpriteEffects.None, 1);
                         break;
                     }
 
@@ -261,8 +318,25 @@ namespace Space_Cats_V1._2
         //Required Load Method
         public void loadTexture(ContentManager content)
         {
-            this.z_MainScreenPicture = content.Load<Texture2D>("Content\\Screens\\MainMenuScreen");
+#if !XBOX
+            this.z_MainScreenPicture1 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen1");
+            this.z_MainScreenPicture2 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen2");
+            this.z_MainScreenPicture3 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen3");
+            this.z_MainScreenPicture4 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen4");
+            this.z_MainScreenPicture5 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen5");
+            this.z_MainScreenPicture6 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen6");
             this.z_isLoaded = true;
+#endif
+            if (!this.z_isLoaded)
+            {
+                this.z_MainScreenPicture1 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen11");
+                this.z_MainScreenPicture2 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen12");
+                this.z_MainScreenPicture3 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen13");
+                this.z_MainScreenPicture4 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen14");
+                this.z_MainScreenPicture5 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen15");
+                this.z_MainScreenPicture6 = content.Load<Texture2D>("Content\\Screens\\MainMenus\\MainMenuScreen16");
+                this.z_isLoaded = true;
+            }
         }
 
     }

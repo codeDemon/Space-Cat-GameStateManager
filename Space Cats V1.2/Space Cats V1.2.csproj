@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\AI_ZigZag.cs" />
+    <Compile Include="Screens+Menus\MissionScreen.cs" />
     <Compile Include="Screens+Menus\MainMenuScreen.cs" />
     <Compile Include="Screens+Menus\LoadingScreen.cs" />
     <Compile Include="Managers\StageManager.cs" />
